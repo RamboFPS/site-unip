@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #f5f6fa;
+  background: linear-gradient(135deg, #ffcc00 0%, #005fa3 100%);
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+ 
+  background: #003366; /* substituindo rgba(0, 34, 68, 0.95) */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+  padding: 12px 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #ffcc00;
+  color: #003366;
+  outline: none;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #c7bd2d;
+  margin-bottom: 18px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(39, 18, 173, 0.788);
+}
+
+h1 {
+  color: #005fa3;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #0a0a0a;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 0 16px;
+}
+/* Centro da Home */
+section[tabindex="0"] {  
+  background: #fffb11;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px 24px 24px;
+  margin-bottom: 32px;
+  transition: box-shadow 0.2s;
+}
+/* Borda da Home */
+section[tabindex="0"]:focus {
+  box-shadow: 0 0 0 3px #322aa5;
+}
+
+/* Artigos */
+article {
+  margin-bottom: 24px;
+}
+
+h3 {
+  color: #283cac;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+p {
+  color:#000000;
+  font-size: 1rem;
+}
+
+/* Listas de links (Cursos e Campus) */
+.list-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  list-style: disc inside;
+  color: #af267b;
+}
+
+.list-links li {
+  background: #ffcc00;
+  border-radius: 8px;
+  padding: 6px 14px;
+  color:#0a0a0a;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.list-links li {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+
+.list-links a {
+  color: #003366;
+  background: #204ea1;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.list-links a:hover,
+.list-links a:focus {
+  background: #003366;
+  color: hsl(91, 100%, 50%);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+/* Grid de Cursos */
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.course-card {
+  background: #fff;
+  color: #003366;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 24px 18px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.course-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+}
+
+.course-card h4 {
+  margin: 0 0 8px 0;
+  color: #005fa3;
+  font-size: 1.1rem;
+}
+
+.course-card p {
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+  color: #070707;
+}
+
+.course-link {
+  background:#ffcc00 ;
+  color: #003360;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-end;
+}
+
+.course-link:hover {
+  background: #003366;
+  color: #ffcc00;
+}
+
+/* Grid de Campus */
+.campus-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.campus-card {
+  background: #fff;
+  color: #003366;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 24px 18px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.campus-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+}
+
+.campus-card h4 {
+  margin: 0 0 8px 0;
+  color: #005fa3;
+  font-size: 1.1rem;
+}
+
+.campus-card p {
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+.campus-link {
+  background: #ffcc00;
+  color: #003366;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-end;
+}
+
+.campus-link:hover {
+  background: #003366;
+  color: #ffcc00;
+}
+
+/* CTA Home */
+.cta-home {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.cta-home .course-link,
+.cta-home .campus-link {
+  font-size: 1.08rem;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cta-home .course-link {
+  background: #003366;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+.cta-home .course-link:hover {
+  background: #ffcc00;
+  color:#003366;
+}
+
+.cta-home .campus-link {
+  background: #003366;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+.cta-home .campus-link:hover {
+  background: #ffcc00;
+  color: #003366;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0 16px 0;
+  background: rgba(0, 34, 68, 0.95);
+  border-top: 2px solid #ffcc00;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 3px solid #ffcc00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+footer a:focus {
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+
+footer a:hover {
+  transform: scale(1.13) rotate(-6deg);
+  border-color: #003366;
+  background: #ffcc00;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+}
+
+footer svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  color: #003366;
+  transition: color 0.2s;
+}
+
+footer a:hover svg,
+footer a:focus svg {
+  color: #003366;
+}
+
+/* Centralização */
+.center {
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  main {
+    max-width: 100%;
+    padding: 12px 4vw 0 4vw;
+  }
+  section[tabindex="0"] {
+    padding: 18px 8px 16px 8px;
+  }
+  nav ul {
+    gap: 16px;
+    font-size: 1rem;
+  }
+  .list-links {
+    gap: 8px;
+  }
+  .list-links li {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 32px 4vw 18px;
+  }
+  header img {
+    width: 90px;
+    height: 90px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .list-links a {
+    font-size: 0.95rem;
+    padding: 10px 6px;
+  }
+  footer {
+    gap: 8px;
+    padding: 14px 0 10px 0;
+  }
+  footer img {
+    width: 28px;
+    height: 28px;
+  }
+}
